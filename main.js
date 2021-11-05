@@ -64,9 +64,10 @@ let html = '';
 
 // creo un ciclo for
 for( let i = 0; i < posts.length; i++){
-    
+    // metto in una costante gl'indici dei post
     const post = posts[i];
     console.log(post);
+    // aggiungo all'html la struttura del primo post
     html += 
     `
     <div class="post">
@@ -101,5 +102,24 @@ for( let i = 0; i < posts.length; i++){
         </div>
     `;
 }
-
+// inserisco la variabile html nel container
 container.innerHTML = html;
+// intercetto il mi piace
+let click = document.querySelector('.like-button');
+// creo evento click
+// quando clicco aggiungo la classe (like-button--liked) al mipiace
+//  e incremento di 1 il contatore dei likes
+let numberLikes = document.getElementById('like-counter-1');
+
+let c = numberLikes;
+console.log(c.innerHTML);
+
+click.addEventListener('click', function(){
+    console.log('cliccato');
+    this.classList.add('like-button--liked');
+    c += 1;
+    console.log(c);
+    
+});
+
+
