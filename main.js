@@ -64,6 +64,8 @@ let html = '';
 
 // creo un ciclo for
 for( let i = 0; i < posts.length; i++){
+    
+    const posts = posts[i];
     console.log(posts[i]);
     html += 
     `
